@@ -323,3 +323,11 @@ flex: 2;
     padding: 10px;
 }
 
+.service-icon{
+    width: 77px;
+    margin: auto;
+}
+
+.service-icon img{
+    width: 100%;
+}

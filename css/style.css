@@ -47,6 +47,7 @@ list-style: none;
 
 a{
 text-decoration: none;
+color: #24262b;
 }
 
 .p-x-s{
@@ -347,9 +348,6 @@ flex: 2;
 }
 
 @media (max-width:992px) {
-    a{
-        color: #110006;
-    }
     .col-3{
         width: 50%;
         float: left;
@@ -440,9 +438,9 @@ flex: 2;
         float: left;
     }
 
-    .hero-slider{
+    /* .hero-slider{
         justify-content: center;
-    }
+    } */
 
     
     

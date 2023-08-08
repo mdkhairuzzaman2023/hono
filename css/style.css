@@ -63,6 +63,7 @@ flex: 2;
 
 .col-3{
     width: 25%;
+    float: left;
 
 }
 
@@ -330,4 +331,116 @@ flex: 2;
 
 .service-icon img{
     width: 100%;
+}
+
+/* resposive start */
+
+@media (max-width:1202px) {
+    .col-3{
+        width: 25%;
+        float: left;
+    }
+
+    #main-menu>ul>li>a{
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width:992px) {
+    .col-3{
+        width: 50%;
+        float: left;
+    }
+
+    .top-bar .container{
+        width: 90%;
+    }
+
+    .header-wraper{
+        flex-direction: row-reverse;
+    }
+
+    #main-menu{
+        position: absolute;
+        left: 7%;
+        top: 45px;
+        
+     } 
+
+    #main-menu>ul>li{
+        display: list-item;
+    }
+    #main-menu>ul>li>a{
+        padding: 3px 12px;
+        color: #110006;
+        
+    }
+
+    .sub-menu{
+        left: 80px;
+        text-align: left;
+        min-width: 200px;
+    }
+
+    .mega-menu{
+        min-width: 200px;
+        left: 75px;
+        right: auto;
+        padding: 10px 15px;
+    }
+
+    .mega-menu-inner{
+        flex-direction: column;
+        
+    }
+
+    .mega-menu-sub{
+        display: none;
+        position: absolute;
+        left: 100px;
+        background-color: #fff;
+        min-width: 175px;
+        padding-left: 20px;
+    }
+
+    .mega-menu-item:hover .mega-menu-sub{
+        display: block;
+    }
+
+    .mega-menu >ul >li> a.mega-menu-item-title{
+        font-size: 12px;
+        color: #000;
+    }
+
+    .active-links ul{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    
+    .hero-slider{
+        align-items: flex-end;
+    }
+
+    .slider-content{
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width:575px) {
+    .section-gap-top-100{
+        margin-top: 30px;
+    }
+
+    .col-3{
+        width: 100%;
+        float: left;
+    }
+
+    .hero-slider{
+        justify-content: center;
+    }
+
+    
+    
 }

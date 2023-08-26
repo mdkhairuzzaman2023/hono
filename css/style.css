@@ -40,6 +40,13 @@ display: flex;
 .f-2{
     flex: 2;
 }
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
     
 .col-3{
     width: 25%;
@@ -48,9 +55,11 @@ display: flex;
     
 .col-6{
     width: 50%;
-    float: left;
 }
 
+.height-100{
+    height: 100%;
+}
 img{
     vertical-align: middle;
 }
@@ -84,8 +93,9 @@ padding: 0px 5px;
     background-color: #FEF5EF;
     width: 100%;
     line-height: 24.5px;
-    position: relative;
+    position: fixed;
     top: 0px;
+    z-index: 33;
 }
 .logo{
     width: 100px;
@@ -276,10 +286,11 @@ padding: 0px 5px;
     background-size: cover;
     height: 600px;
     background-position: center;
+    margin-top: 80px;
 }
 
 .hero-slider{
-    width: 85%;
+    width: 87%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -300,6 +311,7 @@ padding: 0px 5px;
     font-size: 40px;
     line-height: 40px;
     font-weight: 600;
+    margin: 0px 0pxd 5px;
 }
 
 .slider-content h2 span{
@@ -334,6 +346,7 @@ padding: 0px 5px;
 
 .service-wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 .service-box{
     height: fit-content;
@@ -365,40 +378,104 @@ padding: 0px 5px;
 }
 
 
+/* banner section start  */
+
+.banner-section img{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.banner-wrapper{
+    gap:20px;
+    display: flex;
+}
+.banner-lg-1{
+    position: relative;
+}
+
+.banner-lg-1 .banner-content h4{
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #24262b;
+    margin: 0px 0px 11px;
+    font-weight: 500;
+}
+
+.banner-sm-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:20px;
+}
+
+.banner-sm-item{
+    position: relative;
+}
+
+.banner-sm-item img{
+    width: 100%;
+}
+
+.banner-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+
+
 /* resposive start */
 
 @media (max-width:1202px) {
-    .service-wrapper{
-        display: inherit;
-    }
 
     .col-3{
         width: 25%;
-        float: left;
+    }
+
+    .hero-slider{
+        margin-top: -30px;
     }
 
     #main-menu>ul>li>a{
         padding: 5px 12px;
+    }
+
+    .banner-wrapper .col-6{
+        width: 100%;
+    }
+
+    .banner-content{
+        transform: translate(0% -50%);
+    }
+    .banner-lg-1{
+        margin-bottom: 40px;
     }
 }
 
 @media (max-width:992px) {
     .col-3{
         width: 50%;
-        float: left;
+    }
+
+    .col-6{
+        width: 100%;
     }
 
     .top-bar .container{
         width: 90%;
     }
-
+    nav{
+        display: none;
+    }
+    /* .top-bar:hover nav{
+        display: block;
+    } */
     #main-menu{
         position: absolute;
         right: 0;
         top: 45px;
         background-color: #24262B;
         width: 50%;
-    ;
      }
 
     #main-menu>ul>li{
@@ -445,11 +522,6 @@ padding: 0px 5px;
         font-size: 12px;
         color:#24262b;
     }
-
-    /* .active-links ul{
-        display: flex;
-        align-items: center;
-    } */
     
     .hero-slider{
         align-items: flex-end;
@@ -458,6 +530,7 @@ padding: 0px 5px;
     .slider-content{
         margin-bottom: 150px;
     }
+
 }
 
 @media (max-width:575px) {
@@ -467,8 +540,11 @@ padding: 0px 5px;
 
     .col-3{
         width: 100%;
-        float: left;
+        
     }
-    
+
+    .banner-sm-item{
+        width: 100%;
+    }
     
 }
